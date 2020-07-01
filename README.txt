@@ -1,9 +1,9 @@
 Ocean's 7 - Project Repository
 
-Para Bootcamp The Bridge - Desafío por Tripulaciones
+Para Bootcamp The Bridge - Desafï¿½o por Tripulaciones
 
-Este repositorio es para el almacenamiento de código referente al desafío por tripulaciones de TheBridge.
-En concreto aquel relacionado con la generación de un modelo de ML de supervisión de tráfico informático.
+Este repositorio es para el almacenamiento de cï¿½digo referente al desafï¿½o por tripulaciones de TheBridge.
+En concreto aquel relacionado con la generaciï¿½n de un modelo de ML de supervisiï¿½n de trï¿½fico informï¿½tico.
 
 
 ----------------------------------------------------
@@ -17,9 +17,9 @@ Diario del proyecto
 		- Problemas
 			+ Carga del df
 				No ha cargado sin usar "error_bad_lines=False".
-				De 31813 filas, ha cargado 31809, no sé si se ha cargado columnas
-			+ No sabemos qué hay en las columnas (a qué datos hacen referencia)
-			+ Hay un montón de NaN en la columna 2
+				De 31813 filas, ha cargado 31809, no sï¿½ si se ha cargado columnas
+			+ No sabemos quï¿½ hay en las columnas (a quï¿½ datos hacen referencia)
+			+ Hay un montï¿½n de NaN en la columna 2
 
 
 
@@ -27,7 +27,7 @@ Diario del proyecto
 
 	* Prueba_26/06 explorada
 		- Problemas
-			+ Datos demasiado juntos, difíciles de separar
+			+ Datos demasiado juntos, difï¿½ciles de separar
 
 	* Prueba_28/06 (1 y 2) explorada
 		
@@ -37,4 +37,16 @@ Diario del proyecto
 			+ Carga del df
 				No ha cargado sin usar "error_bad_lines=False".
 			
-			+ Hay un montón de NaN en general ¿Puede ser el formato?
+			+ Hay un montï¿½n de NaN en general ï¿½Puede ser el formato?
+
+- 01/07/2020
+	
+	* Creada carpeta Pruebas
+
+	* Nueva biblioteca para EDA aÃ±adida (EDA.py)
+		+ Contiene funciones de EDA
+	
+	* Ataques antiguos movidos a Pruebas
+
+	* 01-07_Kali notebook creado
+		+ Vuelve a haber gran nÃºmero de columnas vacÃ­as. La construcciÃ³n del df ha sido automÃ¡tica.
