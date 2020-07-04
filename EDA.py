@@ -1,8 +1,6 @@
  # FUNCTIONS
 import datetime
 
-
-
 def f_protected (x, i= 0):
     """
     Create, in your library/module, a protected function called 'f_protected' that creates a lambda function.
@@ -51,7 +49,6 @@ def general_info (df):
         print('-Number of NaNs in df-')
         print (df.isnull().sum() )
 
-
 def time_indexer (df):
     """
                         What it does
@@ -67,7 +64,6 @@ def time_indexer (df):
         df['month'] = df.index.month
     elif t_input == "day":
         df['day'] = df.index.day
-
 
 def df_save (df):
     """
@@ -95,13 +91,25 @@ def null_count (df):
     print (f'Presence of null in clolumns:\n{null_in_df}\n\nNumber of null in columns:\n{is_null}')
 
 
-                                    # LAMBDAS
+
+def value_counter(df):
+    """
+                        ---What it does---
+    Counts the values of all columns of a given df and prints them in succesion.
+                        ---What it needs---
+    A df object
+    """
+    for e in df.columns:
+        print(f"\n{e}:\n{df[e].value_counts()}")
+        print('----------------')
+       
+
 
 def test():
     print('EDA lib ready')
-
 test()
 
+                                    # LAMBDAS
 
 # Gender transforms data into genders (male/female)
 gender = lambda x: "Female" if x == 1 else ("Male" if x == 2 else x)

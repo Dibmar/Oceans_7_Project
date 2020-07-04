@@ -50,3 +50,21 @@ Diario del proyecto
 
 	* 01-07_Kali notebook creado
 		+ Vuelve a haber gran número de columnas vacías. La construcción del df ha sido automática.
+
+- 04/07/2020
+
+	(Dibmar)
+	* Explorando 01-07_Kali
+		Se ha presupuesto que los espacios NaN corresponden con la misma información que los válidos
+		+ Se va a dividir el df en 3:
+			- kali_frame (contiene el númeor de ataque y fecha)
+				Tiempos de ataque explorados. Pueden ser útiles para predicción
+			- kali_ip (contiene la ip de ataque, objetivo y la geolocalización del atacante)
+				Sometido a bfill() y ffill() para eliminar los NaNs presentes
+				Columnas de geolocalización ignoradas por no contener nada
+			- kali_http (contiene host, paquetes, métotos, cookies, protocolos e información del paquete)
+				Sometido a bfill() y ffill() para eliminar los NaNs presentes
+	
+	* Librería EDA
+		+ Añadida función value_counter (cuenta los valores de todas las columnas y los muestra)
+
