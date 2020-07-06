@@ -1,4 +1,4 @@
-Ocean's 7 - Project Repository
+﻿Ocean's 7 - Project Repository
 
 Para Bootcamp The Bridge - Desaf�o por Tripulaciones
 
@@ -67,4 +67,20 @@ Diario del proyecto
 	
 	* Librería EDA
 		+ Añadida función value_counter (cuenta los valores de todas las columnas y los muestra)
+
+- 06/07/2020
+
+	(Dibmar)
+	* Explorando 01-07_Kali(2)
+		Se ha presupuesto que los espacios NaN corresponden con la misma información que los válidos
+		Se va a proponer la idea de que los espacios vacíos sean representados por '0'
+		+ Se va a dividir el df en 3:
+			- kali_frame (contiene el númeor de ataque y fecha)
+				Tiempos de ataque explorados. Pueden ser útiles para predicción
+			- kali_ip (contiene la ip de ataque, objetivo y la geolocalización del atacante)
+				Sometido a bfill() y ffill() para eliminar los NaNs presentes
+				Columnas de geolocalización ignoradas por no contener nada
+			- kali_http (contiene host, paquetes, métotos, cookies, protocolos e información del paquete)
+				Sometido a bfill() y ffill() para eliminar los NaNs presentes
+
 
