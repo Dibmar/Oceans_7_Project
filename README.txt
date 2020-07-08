@@ -95,4 +95,18 @@ Diario del proyecto
 			- kali_local (contiene la ip de ataque, objetivo y la geolocalización del atacante)
 				
 			- kali_protocol (contiene host, paquetes, métotos, cookies, protocolos e información del paquete)
-				Sometido a bfill() y ffill() para eliminar los NaNs presentes
+				
+
+- 08/07/2020
+
+	(Dibmar)
+	* Explorando 08-07_Kali-Normal
+		Vuelve a haber presente un número elevado de NaNs. Sin embargo, el problema de importación se ha solucionado.
+		+ Se va a dividir el df en 3:
+			- kali_time (contiene el númeor de ataque y fecha)
+				Tiempos de ataque explorados. Pueden ser útiles para predicción
+			- kali_local (contiene la ip de ataque, objetivo y la geolocalización del atacante)
+				
+			- kali_protocol (contiene host, paquetes, métotos, cookies, protocolos e información del paquete)
+				Protocolos prácticamente vacíos (99%). Se espera que la cosa mejore en el siguiente envío
+				
