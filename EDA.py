@@ -1,5 +1,8 @@
  # FUNCTIONS
 import datetime
+import numpy as np
+from datetime import date
+import matplotlib.pyplot as plt
 
 def f_protected (x, i= 0):
     """
@@ -113,3 +116,69 @@ test()
 
 # Gender transforms data into genders (male/female)
 gender = lambda x: "Female" if x == 1 else ("Male" if x == 2 else x)
+
+                                    # GRÁFICOS
+
+def plot_bar(df_column, save_image = 0):
+    """
+                        ---What it does---
+    Plots a barplot with the variable given. And if desired, saves the plot in the same directory as parent file with "<current date>_barplot.jpg" as name.
+                        ---What it needs---
+    A df_column, panda series or dictionary with numerical values
+                        ---What it returns---
+    If desired (save_image != 0), a jpg image file in the same directory using "<current date>_barplot.jpg" as name.
+    """
+    if df_column.sum() > 0:
+        df_column.plot(kind = 'bar')
+        if save_image != 0:
+            name = str(date.today()) + '_barplot.jpg'
+            plt.savefig(name)
+    else:
+        print(f'No numeric data to plot')
+
+def plot_line(df_column, save_image = 0):
+    """
+                        ---What it does---
+    Plots a lineplot with the variable given. And if desired, saves the plot in the same directory as parent file with "<current date>_lineplot.jpg" as name.
+                        ---What it needs---
+    A df_column, panda series or dictionary with numerical values
+                        ---What it returns---
+    If desired (save_image != 0), a jpg image file in the same directory using "<current date>_lineplot.jpg" as name.
+    """
+    if df_column.sum() > 0:
+        df_column.plot()
+        if save_image != 0:
+            name = str(date.today()) + '_lineplot.jpg'
+            plt.savefig(name)
+    else:
+        print(f'No numeric data to plot')
+
+def plot_pie(df_column, save_image = 0):
+    """
+                        ---What it does---
+    Plots a pieplot with the variable given. And if desired, saves the plot in the same directory as parent file with "<current date>_pieplot.jpg" as name.
+                        ---What it needs---
+    A df_column, panda series or dictionary with numerical values
+                        ---What it returns---
+    If desired (save_image != 0), a jpg image file in the same directory using "<current date>_pieplot.jpg" as name.
+    """
+    if df_column.sum() > 0:
+        data = df_column
+        # Create lables
+        labels = dict(df_column).keys()
+
+        # Plot pie chart
+        plt.pie(data, autopct='%1.1f%%', startangle=0, shadow= True, pctdistance = 0.5, labeldistance = 1.2)
+
+        # Legend and titles
+        plt.legend(labels, loc= 'best')
+        plt.title(df_column.name, loc='center')
+
+        plt.tight_layout()
+        plt.show()
+        
+        if save_image != 0:
+            name = str(date.today()) + '_pieplot.jpg'
+            plt.savefig(name)
+    else:
+        print ("No numeric data to plot")
