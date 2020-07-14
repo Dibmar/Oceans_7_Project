@@ -135,3 +135,19 @@ Diario del proyecto
 			Gráfico de líneas
 		+ plot_pie
 			Gráfico de quesos
+
+- 14/07/2020
+
+	(Dibmar)
+	* Creado nuevo notebook 14-07_Normal_Traffic
+		Contiene todos los registros generados el 14/07/2020 de tráfico Normal
+
+		+ Se ha procedido a:
+			- Rellenar los NaNs presentes en columna 'date' (carece de importancia a nivel análisis)
+			- Rellenar los NaNs con la media de la columna en columna 'len' (importante para análisis)
+			- Eliminadas columans 'src_geo', 'dest_geo' y 'request_method' (alto número de NaNs)
+			- Eliminada columna 'index' (inutil)
+			- Eliminar registros vacíos de 'src_port' y 'dest_port' (2.19 y 4.98% del total)
+			- Insertada columna 'attack' en posición 10. Rellenada con 0 (etiqueta de tráfico normal)
+
+			Resultado: df libre de NaNs con tamaño 377.720 filas y 11 columnas
