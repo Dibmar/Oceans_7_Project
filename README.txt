@@ -151,3 +151,21 @@ Diario del proyecto
 			- Insertada columna 'attack' en posición 10. Rellenada con 0 (etiqueta de tráfico normal)
 
 			Resultado: df libre de NaNs con tamaño 377.720 filas y 11 columnas
+
+- 15/07/2020
+
+	(Dibmar)
+	* Creado nuevo notebook 15-07_ML_model
+		Contiene el código para los modelos de ML
+		
+		+ Se ha procedido a:
+			- Generar un modelo lineal
+				Ha generado más clases de las que debería haber. DESCARTADO
+			- Generar una regresión logística
+				Genera un 62.81% de acc.
+			- Generar un random forest
+				Genera un 78.98% de acc
+		
+		+ Falta
+			- Codificar la columna de 'protocol' para que pueda ser utilizable en el modelo de ML
+				Se espera que mejoren las acc del modelo
