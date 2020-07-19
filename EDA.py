@@ -106,7 +106,14 @@ def value_counter(df):
         print(f"\n{e}:\n{df[e].value_counts()}")
         print('----------------')
        
-
+def counter(counter):
+    """
+    ---What it does---
+    Counter system to show progress of function
+    """
+    counter += 1
+    sys.stdout.write("\r {0} %".format(counter))
+    sys.stdout.flush()
 
 def test():
     print('EDA lib ready')

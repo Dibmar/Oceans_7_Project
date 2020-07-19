@@ -169,3 +169,22 @@ Diario del proyecto
 		+ Falta
 			- Codificar la columna de 'protocol' para que pueda ser utilizable en el modelo de ML
 				Se espera que mejoren las acc del modelo
+
+- 19/07/2020
+
+	(Dibmar)
+	* 15-07_ML_model
+		XLGBoost Classifier seleccionado como modelo para demostración
+		+ Se ha procedido a
+			- Generar modelo de Decission Trees
+				Genera un 86.21% de acc
+			- Generar un modelo de Gradient Boost Classifier
+				Genera un 84.31% de acc
+			- Generar un modelo de XLGBoost Classifier
+				Genera un 89.43% de acc
+
+	* Creada carpeta Front_Line_Assembly
+		Para demostración
+
+	* Creado nuevo predictor_1 en Front_Line_Assembly
+		Contiene el modelo seleccionado para demostración
