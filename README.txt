@@ -188,3 +188,16 @@ Diario del proyecto
 
 	* Creado nuevo predictor_1 en Front_Line_Assembly
 		Contiene el modelo seleccionado para demostración
+
+- 21/07/2020
+
+	(Dibmar)
+	* predictor_1
+		+ Se ha procedido a 
+			- Generar los modelos de predicción para demostración
+			- Generar arbol de opciones para simulación
+	
+	* Creado libería fucntions en Front_Line_Assembly
+		Contiene las funciones que
+			- Generan modelos de tráfico normal y ataque
+			- Realizan la predicción de acuerdo al modelo especificado
