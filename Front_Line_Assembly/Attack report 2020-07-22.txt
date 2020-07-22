@@ -1,0 +1,13 @@
+			---Attack report 2020-07-22---
+Attack produced using a Windowsploitable7 attack machine
+Valuable info:
+date                           Jul  9, 2020 23:05:42.585301457 CEST
+duration                                                 2.6613e-05
+src_port                                                      32786
+destination                                               10.0.2.15
+dest_port                                                       443
+protocol                                                        TCP
+length                                                           66
+info              32786  >  443 [ACK] Seq=367 Ack=1492 Win=64128...
+type_of_attack                                               Nessus
+Name: 251991, dtype: object

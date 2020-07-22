@@ -197,7 +197,16 @@ Diario del proyecto
 			- Generar los modelos de predicción para demostración
 			- Generar arbol de opciones para simulación
 	
-	* Creado libería fucntions en Front_Line_Assembly
+	* Creado libería functions en Front_Line_Assembly
 		Contiene las funciones que
 			- Generan modelos de tráfico normal y ataque
 			- Realizan la predicción de acuerdo al modelo especificado
+
+- 22/07/2020
+
+	(Dibmar)
+	* functions
+		+ Se ha ajustado
+			- Los parámetros de representación de las funciones creadoras de modelo
+		+ Se ha procedido a 
+			- Crear una función básica de generación de informes

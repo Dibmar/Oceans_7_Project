@@ -3,6 +3,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from xgboost import XGBClassifier
+import numpy as np
 
 def counter(counter):
     """
@@ -60,7 +61,19 @@ def to_ML (df, label):
     # Reporting on performance
     y_pred = xgb_model.predict(X_test)
     m = confusion_matrix(y_test, y_pred)
-    precission = (m[0][0] + m[1][1]) / (m.sum())
+
+    shape = np.array(m.shape)[0]
+    diag = 0
+    diag_list = []
+    while (diag < shape).all():
+        diag_list.append(diag)
+        diag = diag + 1
+         
+    diagonal_sum = 0
+    for n in diag_list:
+        diagonal_sum += m[n,n]
+
+    precission = diagonal_sum / (m.sum())
 
     print("Classification Report")
     print(classification_report(y_test, y_pred))
@@ -116,7 +129,19 @@ def to_ML_attack (df, label):
     # Reporting on performance
     y_pred = xgb_model.predict(X_test)
     m = confusion_matrix(y_test, y_pred)
-    precission = (m[0][0] + m[1][1]) / (m.sum())
+    
+    shape = np.array(m.shape)[0]
+    diag = 0
+    diag_list = []
+    while (diag < shape).all():
+        diag_list.append(diag)
+        diag = diag + 1
+         
+    diagonal_sum = 0
+    for n in diag_list:
+        diagonal_sum += m[n,n]
+
+    precission = diagonal_sum / (m.sum())
 
     print("Classification Report")
     print(classification_report(y_test, y_pred))
@@ -149,3 +174,21 @@ def predict_what (to_predict, label, model):
     y_pred = model.predict(to_predict)
 
     return y_pred
+
+def report_maker():
+    """
+                        ---What it does---
+    Writes a simple attack report and saves it in the same directory of the program.
+
+                        ---What it needs---
+        + A choice made by input. It needs to be expressed thusly: y or Y
+    """
+    choice = input("Do you wish a report of the last attack to be saved? (Y/N)> ")
+
+    if choice == 'y' or choice == 'Y':  
+    f= open(f"Attack report {date.today()}.txt","w+")
+
+    f.write(f"\t\t\t---Attack report {date.today()}---\n")
+    f.write(f"Attack produced using a {machine} attack machine\n")
+    f.write(f"Valuable info:\n\n{info}")
+    f.close()
