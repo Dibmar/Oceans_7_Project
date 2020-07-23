@@ -193,6 +193,6 @@ def report_maker(machine, type_attack, info):
         f= open(f"Attack report {dt_gmt_2}.txt","w+")
 
         f.write(f"\t\t\t---Attack report {dt_gmt}---\n")
-        f.write(f"Attack produced using a {machine} attack machine\n")
+        f.write(f"Attack {type_attack} produced to a {machine} machine\n")
         f.write(f"Valuable info:\n\n{info}")
         f.close()
