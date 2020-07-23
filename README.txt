@@ -210,3 +210,9 @@ Diario del proyecto
 			- Los parámetros de representación de las funciones creadoras de modelo
 		+ Se ha procedido a 
 			- Crear una función básica de generación de informes
+
+- 22/07/2020
+
+	(Dibmar)
+	* predictor_1
+		Toques finales al modelo para presentación

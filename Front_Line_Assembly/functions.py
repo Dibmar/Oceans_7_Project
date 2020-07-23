@@ -4,6 +4,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from xgboost import XGBClassifier
 import numpy as np
+from time import strftime,gmtime
+ 
+dt_gmt = strftime("%d-%m-%Y %H:%M:%S", gmtime())
+dt_gmt_2 = strftime("%d-%m-%Y %Hh %Mm %Ssec", gmtime())
 
 def counter(counter):
     """
@@ -175,7 +179,7 @@ def predict_what (to_predict, label, model):
 
     return y_pred
 
-def report_maker():
+def report_maker(machine, type_attack, info):
     """
                         ---What it does---
     Writes a simple attack report and saves it in the same directory of the program.
@@ -186,9 +190,9 @@ def report_maker():
     choice = input("Do you wish a report of the last attack to be saved? (Y/N)> ")
 
     if choice == 'y' or choice == 'Y':  
-    f= open(f"Attack report {date.today()}.txt","w+")
+        f= open(f"Attack report {dt_gmt_2}.txt","w+")
 
-    f.write(f"\t\t\t---Attack report {date.today()}---\n")
-    f.write(f"Attack produced using a {machine} attack machine\n")
-    f.write(f"Valuable info:\n\n{info}")
-    f.close()
+        f.write(f"\t\t\t---Attack report {dt_gmt}---\n")
+        f.write(f"Attack produced using a {machine} attack machine\n")
+        f.write(f"Valuable info:\n\n{info}")
+        f.close()
